@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Asistencia Page";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Control de Asistencia</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Asistencia</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="m-0 card-title">
+                            <i class="fas fa-user"></i>
+                            Registrar Asistencia - Diaria
+                        </h3>
+                    </div>
+
+                    <form id="asistenciaForm">
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">DNI </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-wallet"></i></span>
+                                    </div>
+                                    <input type="text" name="dni" class="form-control" id="exampleInputdni" placeholder="Ingresar DNI" maxlength="8" autocomplete="off">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.col-md-6 -->
+            <div class="col-lg-8">
+                <partial name="ListaAsistencia" />
+            </div>
+            <!-- /.col-md-6 -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+<script src="~/js/controlAsistencia.js"></script>
+<script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/signalrAsistencia.js"></script>

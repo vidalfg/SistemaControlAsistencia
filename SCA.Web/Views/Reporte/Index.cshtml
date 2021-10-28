@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Informe ";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Informe Asistencia</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Informe</a></li>
+                    <li class="breadcrumb-item active">Asistencia</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="m-0 card-title">
+                    <i class="fas fa-user"></i>
+                    Registrar Asistencia - Diaria
+                </h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
+                </div>
+            </div>
+            <div class="card-body">
+                <form class="form-horizontal">
+                        <div class="form-group row">
+                            <label  class="col-sm-1 col-form-label">Grado </label>
+                            <div class="col-sm-3">
+                                <select id="cboGrado" class="form-control rounded-0">
+                                  
+                                </select>
+                            </div>
+
+                            <label   class="col-sm-1 col-form-label">Sección </label>
+                            <div class="col-sm-3">
+                                <select id="cboSeccion" class="form-control rounded-0">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                    <option>option 5</option>
+                                </select>
+                            </div>
+                            <label   class="col-sm-1 col-form-label">Dni</label>
+                            <div class="input-group col-sm-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-wallet"></i></span>
+                                </div>
+                                <input type="text" name="dni" class="form-control rounded-0" id="exampleInputdni" placeholder="Ingresar DNI" maxlength="8" autocomplete="off">
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-1 col-form-label">Fecha Ini.</label>
+
+                            <div class="input-group col-sm-3">
+                                @*<div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-wallet"></i></span>
+                                </div>*@
+                                <input type="date" name="dni" class="form-control rounded-0" id="exampleInputdni" placeholder="Ingresar DNI" maxlength="10" autocomplete="off">
+                            </div>
+
+                            @*<div class="col-sm-3">
+                                <input type="date" />
+                                <div class="input-group date" id="timepicker" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#timepicker">
+                                    <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="far fa-clock"></i></div>
+                                    </div>
+                                </div>
+                            </div>*@
+
+                            <label for="inputPassword3" class="col-sm-1 col-form-label">Fecha Fin</label>
+                            <div class="col-sm-3">
+                                <input type="date" name="dni" class="form-control rounded-0" id="exampleInputdni" placeholder="Ingresar DNI" maxlength="10" autocomplete="off">
+                            </div>
+                            <label for="inputPassword3" class="col-sm-1 col-form-label">&nbsp;</label>
+                            <div class="col-sm-3">
+                                <a class="btn btn-primary">  <i class="fas fa-search"></i> Buscar </a>
+                                <a class="btn btn-info">  <i class="fas fa-eraser"></i> Limpiar </a>
+                            </div>
+
+                        </div>
+
+                </form>
+            </div>
+
+        </div>
+
+   
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="m-0 card-title">
+                    <i class="fas fa-list-alt"></i>
+                    Listado de Asistencia
+                </h3>
+                @*<div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
+            </div>*@
+            </div>
+            <div id="tbReporte" class="card-body">
+                
+            </div>
+
+
+
+            <div  id="content_result">
+                <div class="row">
+
+                    <div  class="col-sm-4" style="padding-right:0px;">
+                        <table class="table table-condensed table-bordered table-hover table-striped table-sorted">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Estudiantes</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody id="tb_ListaEstudiante">
+                                <tr>
+                                    <td class="hide"> jajajajja</td>
+                                    <td class="hide"> jajajajja</td>
+                                    <td> jajajajja</td>
+                                    <td> jajajajja</td>
+                                </tr>
+                               
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="col-sm-8" style="padding-left:0px;">
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-bordered table-hover table-striped table-sorted" style="border-right:0px;width:auto;">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">23/10/2021</th>
+                                        <th class="text-center">24/10/2021</th>
+                                        <th class="text-center">25/10/2021</th>
+                                        <th class="text-center">26/10/2021</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">SI</td>
+                                        <td class="text-center">No</td>
+                                        <td class="text-center">SI</td>
+                                        <td class="text-center">NO</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">SDSDDSDS</td>
+                                        <td class="text-center">SDSDDSDS</td>
+                                        <td class="text-center">SDSDDSDS</td>
+                                        <td class="text-center">SDSDDSDS</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+<script src="~/js/reporteAsistencia.js"></script>
